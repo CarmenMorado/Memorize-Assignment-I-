@@ -43,7 +43,7 @@ struct ContentView: View {
     var vehicleTheme: some View {
         Button(action: {
             emojis = vehicleEmojis.shuffled()
-            emojiCount = 16
+            emojiCount = Int.random(in: 4...16)
         }, label: {
             VStack{
                 Image(systemName: "car").font(.largeTitle)
@@ -55,7 +55,7 @@ struct ContentView: View {
     var animalTheme: some View {
         Button(action: {
             emojis = animalEmojis.shuffled()
-            emojiCount = 12
+            emojiCount = Int.random(in: 4...12)
         }, label: {
             VStack{
                 Image(systemName: "ladybug").font(.largeTitle)
@@ -67,7 +67,7 @@ struct ContentView: View {
     var foodTheme: some View {
         Button(action: {
             emojis = foodEmojis.shuffled()
-            emojiCount = 8
+            emojiCount = Int.random(in: 4...10)
         }, label: {
             VStack{
                 Image(systemName: "cart").font(.largeTitle)
